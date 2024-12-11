@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  background-color: var(--neutral-very-light-grayish-blue);
+  background-image: url("../assets/bg-top.svg");
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: 375px 658px;
+  position: relative; /* Added to make sure ::before is positioned relative to body */
+  z-index: 0; /* Adjusted z-index */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full height of the viewport */
+}
+
+.highlight-section {
+  text-align: center;
+  flex: 1;
+}
+
+.highlight-text {
+  font-size: 125px;
+  color: #66CC00;
+  margin-left: 50px;
+  animation: highlightAnimation 5s infinite;
+}
+
+@keyframes highlightAnimation {
+  0%, 100% {
+    color: #66CC00;
+  }
+  50% {
+    color: #fff;
+  }
+}
+
+.contact-sales {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px; /* Adjust the margin as needed */
+  margin-bottom: -500px;
+}
+
+.contact-sales p {
+  margin-bottom: 10px;
+}
+
+.contact-sales button {
+  padding: 10px 20px;
+  background-color: #66CC00;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .highlight-section {
+    display: none; /* Hide the highlight section on smaller screens */
+  }
+
+  .contact-sales {
+  display:none;
+  }
+
+
+  .footer-message {
+    display: block; /* Show the footer message on smaller screens */
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #000;
+  }
+}
+
+@media (max-width: 480px) {
+  .highlight-section {
+    display: none; /* Hide the highlight section on smaller screens */
+  }
+
+  .contact-sales {
+    margin-top: 30px; /* Adjust the margin as needed */
+    margin-bottom: 10px;
+  }
+
+  .contact-sales p {
+    text-align: center;
+  }
+
+  .contact-sales button {
+    padding: 8px 16px;
+  }
+
+  .footer-message {
+    display: block; /* Show the footer message on smaller screens */
+    text-align: center;
+    margin-top: -200px;
+    margin-left:200px;
+    font-size: 16px;
+    color: #000;
+  }
+}
+
+.signup-signin-container {
+  width: 80%;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.input-wrapper p {
+  margin: 0 0 5px 0;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.btn-blue {
+  background-color: #007BFF;
+}
+
+.footer-message {
+  display: none; /* Hide the footer message by default */
+}
